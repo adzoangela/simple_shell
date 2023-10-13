@@ -20,8 +20,9 @@ char **obtain_environ(info_struct *inf)
  * custom_unsetenv - discard environment variable
  * @inf: containing potential arguments.
  *  Return: 1, 0
- * @var: the string
+ * @varr: the string
  */
+
 int custom_unsetenv(info_struct *inf, char *varr)
 {
 	list_struct *nd = inf->env;

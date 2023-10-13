@@ -5,6 +5,7 @@
  * @n: pointer
  * Return: size
  */
+
 size_t l_length(const list_struct *n)
 {
 	size_t a = 0;
@@ -22,6 +23,7 @@ size_t l_length(const list_struct *n)
  * @head: pointer
  * Return: text array
  */
+
 char **convert_list_to_strings(list_struct *head)
 {
 	list_struct *nd = head;
@@ -54,11 +56,11 @@ char **convert_list_to_strings(list_struct *head)
 
 
 /**
- * prints_list - prints all elements of a list_t linked list
- * @h: pointer to first node
- *
+ * _prints_lists - prints all elements of a list_t linked list
+ * @n: pointer to first node
  * Return: size of list
  */
+
 size_t _prints_lists(const list_struct *n)
 {
 	size_t a = 0;
@@ -68,7 +70,7 @@ size_t _prints_lists(const list_struct *n)
 		custom_puts(conv_num(n->num, 10, 0));
 		custom_putchar(':');
 		custom_putchar(' ');
-		custom_puts(n->str? n->str : "(nil)");
+		custom_puts(n->str ? n->str : "(nil)");
 		custom_puts("\n");
 		n = n->next;
 		a++;
@@ -77,13 +79,13 @@ size_t _prints_lists(const list_struct *n)
 }
 
 /**
- * start_node - fetches node with prefix
- * @node: pointer to list head
- * @prefix: string to match
- * @c: the next character after prefix to match
- *
+ * node_with - fetches node with prefix
+ * @nd: pointer to list head
+ * @pf: string to match
+ * @c: the next character after prefix to matc
  * Return: match node or null
  */
+
 list_struct *node_with(list_struct *nd, char *pf, char c)
 {
 	char *a = NULL;
@@ -99,16 +101,17 @@ list_struct *node_with(list_struct *nd, char *pf, char c)
 }
 
 /**
- * get_node_index - gets the index of a node
+ * get_node_with_index - gets the index of a node
  * @head: pointer to list head
- * @node: pointer to the node
+ * @nd: pointer to the node
  *
  * Return: index of node or -1
  */
+
 ssize_t get_node_with_index(list_struct *head, list_struct *nd)
 {
 	size_t a = 0;
- 
+
 	while (head)
 	{
 		if (head == nd)
