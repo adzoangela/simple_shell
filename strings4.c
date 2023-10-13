@@ -2,11 +2,9 @@
 
 /**
  * error_putfd - writes the character c to given fd
- * @c: The character to print
- * @fd: The filedescriptor to write to
- *
- * Return: On success 1.
- * On error, -1 is returned, and errno is set appropriately.
+ * @ch: The character to print
+ * @fd: The filedesc to write t
+ * Return: 1(success).
  */
 int error_putfd(char ch, int fd)
 {
@@ -27,12 +25,12 @@ int error_putfd(char ch, int fd)
 
 /**
  * list_prefix - returns node whose string starts with prefix
- * @node: pointer to list head
- * @prefix: string to match
+ * @head: pointer to list head
+ * @pref: string to match
  * @c: the next character after prefix to match
- *
- * Return: match node or null
+ * Return: match node
  */
+
 list_struct *list_prefix(list_struct *head, char *pref, char c)
 {
 	char *p = NULL;
