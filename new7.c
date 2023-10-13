@@ -3,10 +3,10 @@
 /**
  * custom_is_cmd - finds executable
  * @inf: struct
- * @path: path
- *
+ * @adr: path
  * Return: 1 or 0
  */
+
 int custom_is_cmd(info_struct *inf, char *adr)
 {
 	struct stat strrr;
@@ -25,11 +25,13 @@ int custom_is_cmd(info_struct *inf, char *adr)
 
 /**
  * custom_dup_chars - duplicates characters
- * @pathstr: the PATH string
- * @start: starting index
- * @stop: stopping index
+ * @pts: the PATH string
+ * @strt: starting index
+ * @stp: stopping index
+ *
  * Return: pointer to new buffer
  */
+
 char *custom_dup_chars(char *pts, int strt, int stp)
 {
 	static char buff[1024];
@@ -47,6 +49,7 @@ char *custom_dup_chars(char *pts, int strt, int stp)
  * @inf: struct
  * @pts: string
  * @cmd: what to find
+ *
  * Return: full path
  */
 char *custom_find_path(info_struct *inf, char *pts, char *cmd)
