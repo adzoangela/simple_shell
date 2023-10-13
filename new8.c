@@ -1,52 +1,11 @@
 #include "main.h"
 
 /**
- * hash_batch - shell loop
- * @inf: info struct
- * @av: argument vector
- * Return: 0 on success, 1 on error, or error code
- */
-/*int hash_batch(info_struct *info, char **av)
-{
-	ssize_t a = 0;
-	int builtin_ttt = 0;
-
-	while (a != -1 && builtin_ttt != -2)
-	{
-		reset_info(info);
-		if (interactive_mode(info))
-			custom_puts(",kk,o$ ");
-		error_putchar(RESET_BUF);
-			a = obtain_input(info);
-		if (a != -1)
-		{
-			info_start(info, av);
-			builtin_ttt = search_builtin_cmd(info);
-			if (builtin_ttt == -1)
-				search_builtin_cmd(info);
-		}
-		else if (interactive_mode(info))
-			custom_putchar('\n');
-		free1(info, 0);
-	}
-	history_write(info);
-	free1(info, 1);
-	if (!interactive_mode(info) && info->status)
-		exit(info->status);
-	if (builtin_ttt == -2)
-	{
-		if (info->err_num == -1)
-			exit(info->status);
-		exit(info->err_num);
-	}
-	return (builtin_ttt);
-}*/
-
-/**
- * Search_builtin_cmd - searches builtin command
+ * search_builtin_cmd - searches builtin command
  * @info: the parameter
- * Return: -1, 0
+ * Return: -1 (success), 0
  */
+
 int search_builtin_cmd(info_struct *info)
 {
 	int i, built_rettt = -1;
